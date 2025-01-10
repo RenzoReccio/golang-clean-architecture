@@ -13,9 +13,13 @@ import (
 type WeatherController struct {
 }
 
-func NewWeatherController() *WeatherController {
-	return &WeatherController{}
+func (u *WeatherController) RegisterRoutes(r *gin.Engine) {
+	userGroup := r.Group("/weather")
+	{
+		userGroup.POST("/", u.InsertWeather)
+	}
 }
+
 func (u *WeatherController) InsertWeather(c *gin.Context) {
 	req := new(application_createweather.CreateWeatherCommand)
 

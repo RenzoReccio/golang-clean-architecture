@@ -13,7 +13,7 @@ type GetWeatherHandler struct {
 	weatherRepository repository.IWeatherRepository
 }
 
-func NewGetWorkItemTypeQueryHandler(weatherRepository repository.IWeatherRepository) *GetWeatherHandler {
+func NewGetWeatherHandler(weatherRepository repository.IWeatherRepository) *GetWeatherHandler {
 	return &GetWeatherHandler{weatherRepository: weatherRepository}
 }
 

@@ -12,7 +12,7 @@ import (
 
 func InitApplication(configService *config_service.ConfigService) {
 
-	getWeatherQueryHandler := application_getweather.NewGetWorkItemTypeQueryHandler(configService.WeatherRepository)
+	getWeatherQueryHandler := application_getweather.NewGetWeatherHandler(configService.WeatherRepository)
 	createWeatherQueryHandler := application_createweather.NewCreateWeatherCommandHandler(configService.WeatherRepository)
 	sendWeatherEvent := application_sendweather.NewSendWeatherHandler(configService.WeatherRepository)
 
