@@ -1,12 +1,13 @@
 # Golang Hexagonal Architecture Example
 
-This repository demonstrates the **Hexagonal Architecture** pattern in Go (Golang), providing a clean and modular approach to building scalable applications. The project focuses on maintaining separation of concerns between business logic, application services, and infrastructure.
+This repository demonstrates the Clean Architecture pattern in Go (Golang), providing a clean and modular approach to building scalable applications. The project focuses on maintaining separation of concerns between business logic, application services, and infrastructure.
 
 ## Features
 
-- **Hexagonal Architecture**:
+- **Clean Architecture**:
   - Core domain logic is isolated from frameworks and external dependencies.
-  - Clear distinction between ports (interfaces) and adapters (implementations).
+  - Clear distinction between use cases, entities, and interfaces.
+  - Dependency rule ensuring that dependencies point inwards towards the domain layer.
 - **Docker Integration**:
   - Pre-configured `Dockerfile` for containerized deployment.
 - **Modular Design**:
